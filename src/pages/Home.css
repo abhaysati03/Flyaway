@@ -1,0 +1,105 @@
+/* Home Page Styling */
+.home {
+  padding: 20px;
+  background-color: #1f1f1f; /* Dark background */
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Header Styling */
+.home-header h1 {
+  font-size: 2.5rem;
+  color: #D4AF37; /* Gold color */
+  margin-bottom: 10px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* City Cards Container */
+.city-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Individual City Card */
+.city-card {
+  background-color: #2a2a2a; /* Slightly lighter dark background */
+  border: 2px solid #D4AF37; /* Gold border */
+  border-radius: 10px;
+  width: 300px;
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effects */
+.city-card:hover {
+  transform: scale(1.1) rotate(-2deg); /* Slight tilt */
+  box-shadow: 0 8px 16px rgba(255, 223, 0, 0.7); /* Gold glow */
+  border-color: #F5C300; /* Brighter gold on hover */
+}
+
+/* Image with Overlay Effect */
+.city-card .city-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.city-card .city-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 140, 0, 0.1));
+  mix-blend-mode: overlay;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.city-card:hover .city-image::after {
+  opacity: 1;
+}
+
+/* City Title and Description */
+.city-card h2 {
+  font-size: 1.5rem;
+  color: #F5C300; /* Lighter gold for emphasis */
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.2);
+}
+
+.city-card p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  text-shadow: 0.5px 0.5px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .city-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .city-card {
+    width: 90%;
+  }
+}

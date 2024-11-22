@@ -1,0 +1,166 @@
+/* General page styling */
+.book-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f3e8c5; /* Light, warm background for a mythological theme */
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Title styling */
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #26160c; /* Dark brown color for title */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Card styling */
+.card {
+  background-color: #fff8e1; /* Soft golden background for the card */
+  border: 2px solid #aa6528; /* Gold border */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Card content styling */
+.card-content p {
+  font-size: 18px;
+  color: #4a2c18; /* Dark brown text for card content */
+  margin: 10px 0;
+}
+
+/* Price styling */
+.price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #cf0000; /* Gold color for price */
+}
+
+/* Timings list styling */
+.timings {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timings li {
+  font-size: 16px;
+  color: #4a2c18; /* Dark brown for the timings */
+  margin: 5px 0;
+}
+
+/* Book now button styling */
+.book-btn {
+  background-color: #112bad; /* Gold background */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #213373; /* Darker gold on hover */
+}
+
+/* Toast message container */
+.toast-message {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #502a60; /* Dark brown for the toast background */
+  color: #fff; /* White text */
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  text-align: center;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: bold;
+}
+
+/* When the toast should show */
+.toast-message.show {
+  display: flex; /* Flexbox for the animation */
+  animation: slideIn 0.5s ease-out, fadeOut 0.5s 1s forwards;
+}
+
+/* Tick animation */
+.tick-animation {
+  font-size: 20px; /* Smaller size for the tick */
+  animation: tickAnimation 0.7s ease-out;
+}
+
+/* Check mark tick animation */
+@keyframes tickAnimation {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%) translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade out animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+/* Asgardian themed 'Not Found' message */
+.not-found {
+  font-family: 'Cinzel', serif; /* Ancient and regal looking font */
+  font-size: 22px;
+  font-weight: bold;
+  color: #d28b4b; /* Gold color for the Asgardian touch */
+  text-align: center;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 2px solid #4a2c18; /* Dark brown border for a rich look */
+  background-color: #f7f1e1; /* Soft background for readability */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: glowEffect 1.5s ease-in-out infinite alternate;
+}
+
+/* Animation for a glowing, mystical effect */
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 10px #d28b4b, 0 0 20px #d28b4b, 0 0 30px #d28b4b;
+  }
+  100% {
+    text-shadow: 0 0 20px #4a2c18, 0 0 40px #4a2c18, 0 0 60px #d28b4b;
+  }
+}

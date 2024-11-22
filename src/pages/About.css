@@ -1,0 +1,74 @@
+/* About Page Styling */
+.about {
+  padding: 20px;
+  background-color: #1f1f1f; /* Dark background */
+  color: white;
+  font-family: 'Georgia', serif;
+  text-align: center;
+}
+
+/* Header Styling */
+.about-header h1 {
+  font-size: 2.5rem;
+  color: #D4AF37; /* Gold */
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+/* Villain Sections */
+.villain-sections {
+  margin-top: 20px;
+}
+
+.villain-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.villain-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #D4AF37; /* Gold Border */
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.villain-info h2 {
+  font-size: 1.8rem;
+  color: #F5C300; /* Lighter Gold */
+  margin-bottom: 10px;
+}
+
+.villain-info p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Golden Line */
+.golden-line {
+  width: 80%;
+  border: none;
+  border-top: 3px solid #D4AF37;
+  margin: 20px auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .villain-section {
+    text-align: center;
+  }
+
+  .villain-info {
+    padding: 0 10px;
+  }
+}
